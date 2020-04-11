@@ -1,9 +1,6 @@
 package com.upol;
 
-
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class ArrayExamplesTest {
@@ -34,7 +31,7 @@ class ArrayExamplesTest {
 
         int[] intArr = {5, 6, 1, 8, 3, 4};
 
-        int[] arrayAfterDelete = arrayUtil.deleteElementByIndex(5, intArr);
+        int[] arrayAfterDelete = arrayUtil.deleteElementByIndex(2, intArr);
         arrayUtil.printArray(arrayAfterDelete);
 
     }
@@ -52,7 +49,7 @@ class ArrayExamplesTest {
     @Test
     void testRemoveDuplicates(){
 
-        int[] intArr = {5, 6, 1, 4, 3, 4};
+        int[] intArr = {5, 6, 4, 4, 3, 4};
         int[] uniqueArray = arrayUtil.removeDuplicates(intArr);
         arrayUtil.printArray(uniqueArray);
     }
