@@ -1,7 +1,8 @@
 package com.upol;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 class ArrayExamplesTest {
 
@@ -52,6 +53,26 @@ class ArrayExamplesTest {
         int[] intArr = {5, 6, 4, 4, 3, 4};
         int[] uniqueArray = arrayUtil.removeDuplicates(intArr);
         arrayUtil.printArray(uniqueArray);
+    }
+
+    @Test
+    void testElementFoundBinarySearch(){
+
+        int[] intArr = {2, 5, 7, 9, 15, 19};
+        int searchTerm = 7;
+        int indexOfTermFound = arrayUtil.binarySearch(searchTerm,  intArr);
+
+        assertEquals(2, indexOfTermFound);
+    }
+
+    @Test
+    void testElementNotFoundBinarySearch(){
+
+        int[] intArr = {2, 5, 7, 9, 15, 19};
+        int searchTerm = 0;
+        int indexOfTermFound = arrayUtil.binarySearch(searchTerm,  intArr);
+
+        assertEquals(-1, indexOfTermFound);
     }
 
 }

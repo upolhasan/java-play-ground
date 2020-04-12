@@ -62,5 +62,48 @@ public class ArrayUtil {
                 }
         return intArr;
     }
+
+    public int binarySearch(int searchTerm, int[] intArr){
+
+        //return binarySearchIterative(searchTerm, intArr, 0, intArr.length-1);
+        return binarySearchRecursive(searchTerm, intArr, 0, intArr.length-1);
+
+    }
+
+    private int binarySearchIterative(int searchTerm, int[] intArr, int low, int high) {
+
+        int mid;
+
+        while(low < high){
+
+            mid = (low + high) / 2;
+
+            if( searchTerm == intArr[mid])
+                return mid;
+
+            if( searchTerm > intArr[mid]){
+                low = mid + 1;
+            }else
+                high = mid - 1;
+        }
+
+        return  -1;
+    }
+
+    private int binarySearchRecursive(int searchTerm, int[] intArr, int low, int high ){
+
+        int mid = ( low + high ) / 2;
+
+        if ( searchTerm == intArr[mid])
+            return mid;
+
+        if( low > high)
+            return -1;
+
+        if ( searchTerm > intArr[mid])
+            return binarySearchRecursive(searchTerm, intArr, mid + 1, high);
+        else
+            return binarySearchRecursive(searchTerm, intArr, low, mid - 1);
+    }
 }
 
