@@ -1,8 +1,9 @@
 package com.upol;
 
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
+import com.upol.corejava.ArrayUtil;
+import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
 
 class ArrayExamplesTest {
 
@@ -10,13 +11,13 @@ class ArrayExamplesTest {
 
 /*
     @BeforeClass
-    void setUp(){
+    public void setUp(){
         ArrayExamples arrayExamples = new ArrayExamples();
     }
 */
 
     @Test
-    void sortIntArr() {
+    public void sortIntArr() {
 
         int[] intArr = {5, 6, 1, 8, 3, 4};
 
@@ -28,7 +29,7 @@ class ArrayExamplesTest {
     }
 
     @Test
-    void testDeleteElement(){
+    public void testDeleteElement(){
 
         int[] intArr = {5, 6, 1, 8, 3, 4};
 
@@ -38,17 +39,17 @@ class ArrayExamplesTest {
     }
 
     @Test
-    void testDeleteElementException(){
+    public void testDeleteElementException(){
 
         int[] intArr = {5, 6, 1, 8, 3, 4};
 
-        assertThrows(ArrayIndexOutOfBoundsException.class, () ->{
+        Assertions.assertThrows(ArrayIndexOutOfBoundsException.class, () ->{
             int[] arrayAfterDelete = arrayUtil.deleteElementByIndex(-9, intArr);
         });
     }
 
     @Test
-    void testRemoveDuplicates(){
+    public void testRemoveDuplicates(){
 
         int[] intArr = {5, 6, 4, 4, 3, 4};
         int[] uniqueArray = arrayUtil.removeDuplicates(intArr);
@@ -56,7 +57,7 @@ class ArrayExamplesTest {
     }
 
     @Test
-    void testElementFoundBinarySearch(){
+    public void testElementFoundBinarySearch(){
 
         int[] intArr = {2, 5, 7, 9, 15, 19};
         int searchTerm = 7;
@@ -66,7 +67,7 @@ class ArrayExamplesTest {
     }
 
     @Test
-    void testElementNotFoundBinarySearch(){
+    public void testElementNotFoundBinarySearch(){
 
         int[] intArr = {2, 5, 7, 9, 15, 19};
         int searchTerm = 0;
