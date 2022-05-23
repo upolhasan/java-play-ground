@@ -3,6 +3,7 @@ package com.upol.functional;
 import java.util.HashMap;
 import java.util.Map;
 import org.junit.Test;
+import upol.functional.Environment;
 
 class EnvironmentTest {
   @Test

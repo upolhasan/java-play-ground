@@ -1,20 +1,19 @@
-package com.upol;
+package main.upol;
 
 import static org.junit.Assert.assertEquals;
-import com.upol.corejava.ArrayUtil;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
-
+/*
 class ArrayExamplesTest {
 
-    ArrayUtil arrayUtil = new ArrayUtil();
+    upol.core.ArrayUtil arrayUtil = new upol.core.ArrayUtil();
 
-/*
+
     @BeforeClass
     public void setUp(){
         ArrayExamples arrayExamples = new ArrayExamples();
     }
-*/
+
 
     @Test
     public void sortIntArr() {
@@ -77,3 +76,4 @@ class ArrayExamplesTest {
     }
 
 }
+*/

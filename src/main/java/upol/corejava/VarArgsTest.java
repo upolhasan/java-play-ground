@@ -1,4 +1,4 @@
-package com.upol.corejava;
+package upol.corejava;
 
 import java.util.Arrays;
 
