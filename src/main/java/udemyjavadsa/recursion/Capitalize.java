@@ -5,22 +5,21 @@ public class Capitalize {
 
     // input: i love java
     // output: I love Java
-    if ( str != null  ){
-
       if (str.length()==1){
         return str.toUpperCase();
       }
+      if (str.length() <= 1){
+        return str;
+      }
+      int idOfSpace = str.lastIndexOf(" ");
 
-      if ( str.length() > 0 ){
-        if ( str.charAt(str.length()) == ' ' ){
+      if ( idOfSpace > 0 ){
 
-        }
-        return capitalizeWord(str.substring(0, str.length()-1));
+           return capitalizeWord(str.substring(0, idOfSpace))
+                   + String.valueOf(str.charAt(idOfSpace + 1)).toUpperCase() + str.substring(idOfSpace);
       }
 
-    }
-
-    return str;
+      return String.valueOf(str.charAt(0)) + str.substring(0);
   }  
 
 }
