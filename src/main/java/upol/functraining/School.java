@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
-import jdk.nashorn.internal.objects.annotations.Function;
 
 @FunctionalInterface
 interface CriterionOfStudent{
