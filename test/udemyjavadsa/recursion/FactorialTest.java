@@ -7,10 +7,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class FactorialTest {
 
-    private static Factorial factorial;
+    private Factorial factorial;
 
     @BeforeClass
-    public static void setup(){
+    public void setup(){
         factorial = new Factorial();
     }
 

@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PowerOfANumberTest {
 
-    private static PowerOfANumber powerOfANumber;
+    PowerOfANumber powerOfANumber;
     @BeforeEach
     void setUp() {
         powerOfANumber = new PowerOfANumber();

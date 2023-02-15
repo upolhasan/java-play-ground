@@ -1,6 +1,8 @@
 package upol.rxjava;
 
 import io.reactivex.rxjava3.core.Observable;
+
+import java.util.Arrays;
 import java.util.List;
 
 public class HelloRxJava {
@@ -24,7 +26,7 @@ public class HelloRxJava {
 
   // Create using fromIterable operator
 
-    Observable<Integer> fromIterableObs = Observable.fromIterable(List.of(1,3,654, 7, 8));
+    Observable<Integer> fromIterableObs = Observable.fromIterable(Arrays.asList(1, 3, 654, 7, 8));
     fromIterableObs.subscribe(System.out::println);
 
   }
