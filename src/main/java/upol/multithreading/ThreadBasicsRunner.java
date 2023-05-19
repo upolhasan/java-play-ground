@@ -8,17 +8,28 @@ package upol.multithreading;
 
   -- States:
 
-  * NEW
-  * RUNNABLE
-  * RUNNING
-  * BLOCKED/WAITING
-  * TERMINATED/DEAD
+  * NEW ( Ready to run )
+  * RUNNABLE ( When the other thread is currently executing )
+  * RUNNING ( Currently Executing )
+  * BLOCKED/WAITING ( Waiting for external service / thread for completion )
+  * TERMINATED/DEAD ( Done executing )
+
+  Thread Priority Values:
+
+    It's just a request ( hint to the scheduler ) to have more priority but the priority is never guranteed
+    MIN_PRIORITY = 1;
+    NORM_PRIORITY = 5;
+    MAX_PARIORITY = 10;
+
 
   -- Utility methods:
     * Thread.sleep(int milliseconds) - Puts the current thread to sleep for specified milliseconds.
-    * Thread.yield() - Requests the scheduler to willing to go to WAITING state
+    * Thread.yield() - Requests the scheduler  ( hint to the scheduler )  to willing to go to WAITING state
     * synchronized keyword - Only one thread is allowed to execute a synchronized method and other threads need to wait.
-      Will put a lot of overhead on the performance. e.g. HashTable
+      Will put a lot of overhead on the performance as only one thread can execute a syncronized method leaving
+      all other threads in waiting state. e.g. HashTable
+
+      - From Java 5 and 8 there are other better ways to provide thread safety by means of Concurrent Collections
 
  */
 
@@ -45,6 +56,7 @@ class Task extends Thread{
 
 class Task1 extends Thread{
 
+   @Override
   public void run(){
     System.out.println("\nTask 1 Entered\n");
     for (int i = 101; i <200 ; i++) {
@@ -91,6 +103,7 @@ public class ThreadBasicsRunner {
     } catch (InterruptedException e) {
       e.printStackTrace();
     }
+
     //Task3
     System.out.println(" \nTask 3 Started\n");
     for (int i = 301; i <400 ; i++) {
