@@ -14,11 +14,11 @@ class CapitalizeTest {
 
     @Test
     public void testCapitalize(){
-        assertEquals("I Love Java", capitalize.execute("i love java"));
-        assertEquals("We Love Java", capitalize.execute("we love java"));
-        assertEquals("We Love Java", capitalize.execute("we love java     "));
-        assertEquals("We Love Java", capitalize.execute("     We love java     "));
-        assertEquals("We Love Java", capitalize.execute("     We       love        java     "));
+        assertEquals("I Love Java", capitalize.capitalizeWord("i love java"));
+        assertEquals("We Love Java", capitalize.capitalizeWord("we love java"));
+        assertEquals("We Love Java", capitalize.capitalizeWord("we love java     "));
+        assertEquals("We Love Java", capitalize.capitalizeWord("     We love java     "));
+        assertEquals("We Love Java", capitalize.capitalizeWord("     We       love        java     "));
 
     }
 }

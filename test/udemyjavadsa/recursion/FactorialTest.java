@@ -1,7 +1,8 @@
 package udemyjavadsa.recursion;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
+import org.testng.annotations.BeforeClass;
 
 import static org.junit.jupiter.api.Assertions.*;
 

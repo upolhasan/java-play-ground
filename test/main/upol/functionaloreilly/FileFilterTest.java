@@ -1,9 +1,11 @@
 package main.upol.functionaloreilly;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.File;
-import org.junit.Test;
+
 
 public class FileFilterTest {
 

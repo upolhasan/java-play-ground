@@ -3,7 +3,7 @@ package enums;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.HashMap;
 import java.util.Map;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 public class EnvironmentTest {
     @Test
