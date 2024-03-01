@@ -27,3 +27,4 @@ class SumOfDigitsTest {
         assertEquals(0, sumOfDigits.calculate(-10));
     }
 }
+
