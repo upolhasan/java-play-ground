@@ -18,4 +18,15 @@ class RainWaterTest {
         assertEquals(9, rainWater.getWaterAmount(new int[]{0, 1, 3, 1, 0, 1, 4, 0, 2}));
         assertEquals(3, rainWater.getWaterAmount(new int[]{0, 1, 2, 0, 1, 3}));
     }
+    @Test
+    void getWaterAmountOptimized() {
+        assertEquals(9, rainWater.getWaterAmountOptimized(new int[]{0, 1, 3, 1, 0, 1, 4, 0, 2}));
+        assertEquals(3, rainWater.getWaterAmountOptimized(new int[]{0, 1, 2, 0, 1, 3}));
+    }
+
+    @Test
+    void getWaterAmountOptimizedCode() {
+        assertEquals(9, rainWater.getWaterAmountOptimizedCode(new int[]{0, 1, 3, 1, 0, 1, 4, 0, 2}));
+        assertEquals(3, rainWater.getWaterAmountOptimizedCode(new int[]{0, 1, 2, 0, 1, 3}));
+    }
 }
