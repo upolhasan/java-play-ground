@@ -9,6 +9,9 @@ package upol.collections;
 - CopyOnWriteArrayList: Thread-safe implementation of the List interface. It creates a new copy of the underlying array every time an element is added, modified, or removed, which makes it expensive for large lists but provides high concurrency and thread safety.
 - ImmutableList: An immutable implementation of List interface. It doesn't allow any modifications to the list once it has been created.
 
+Java Tutorial: https://docs.oracle.com/javase/tutorial/collections/interfaces/list.html
+Java Doc: https://docs.oracle.com/javase/8/docs/api/java/util/List.html
+
 */
 
 import java.util.ArrayList;

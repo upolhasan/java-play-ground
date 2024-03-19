@@ -1,4 +1,4 @@
-package upol.corejava;
+package upol.leetcode.medium;
 
 import java.util.Arrays;
 

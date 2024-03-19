@@ -7,6 +7,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FibonacciTest {
 
+    //  n ->  0, 1, 2, 3, 4, 5, 6, 7, 8
+    // Fib -> 0, 1, 1, 2, 3, 5, 8, 13, 21
     private static Fibonacci fibonacci = new Fibonacci();
 
     @BeforeEach
@@ -16,11 +18,39 @@ class FibonacciTest {
 
     @Test
     public void calculateHappyPath() {
-        assertEquals(3, fibonacci.calculate(4), 3);
-        assertEquals(2, fibonacci.calculate(3), 2);
-        assertEquals(5, fibonacci.calculate(5), 5);
-        assertEquals(8, fibonacci.calculate(6), 8);
-        assertEquals(55, fibonacci.calculate(10), 55);
+        assertEquals(3, fibonacci.calculate(4) );
+        assertEquals(2, fibonacci.calculate(3) );
+        assertEquals(5, fibonacci.calculate(5) );
+        assertEquals(8, fibonacci.calculate(6) );
+        assertEquals(55, fibonacci.calculate(10) );
+        assertEquals(1, fibonacci.calculate(1));
+        assertEquals(1, fibonacci.calculate(2));
+        assertEquals(2, fibonacci.calculate(3));
+    }    
+    
+    @Test
+    public void testFibIterative() {
+        assertEquals(3, fibonacci.fibIterative(4) );
+        assertEquals(2, fibonacci.fibIterative(3) );
+        assertEquals(5, fibonacci.fibIterative(5) );
+        assertEquals(8, fibonacci.fibIterative(6) );
+        assertEquals(55, fibonacci.fibIterative(10) );
+        assertEquals(1, fibonacci.fibIterative(1));
+        assertEquals(1, fibonacci.fibIterative(2));
+        assertEquals(2, fibonacci.fibIterative(3));
+    }
+
+
+    @Test
+    public void testFibMemoized() {
+        assertEquals(3, fibonacci.fibMemoized(4) );
+        assertEquals(2, fibonacci.fibMemoized(3) );
+        assertEquals(5, fibonacci.fibMemoized(5) );
+        assertEquals(8, fibonacci.fibMemoized(6) );
+        assertEquals(55, fibonacci.fibMemoized(10) );
+        assertEquals(1, fibonacci.fibMemoized(1));
+        assertEquals(1, fibonacci.fibMemoized(2));
+        assertEquals(2, fibonacci.fibMemoized(3));
     }
 
     @Test
@@ -30,7 +60,7 @@ class FibonacciTest {
 
     @Test
     public void testZeroAndOne(){
-        assertEquals(fibonacci.calculate(0), 0);
-        assertEquals(fibonacci.calculate(1), 1);
+        assertEquals(0, fibonacci.calculate(0));
+        assertEquals(1, fibonacci.calculate(1));
     }
 }

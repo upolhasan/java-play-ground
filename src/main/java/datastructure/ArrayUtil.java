@@ -1,4 +1,4 @@
-package upol.corejava;
+package datastructure;
 
 import java.util.Arrays;
 

@@ -19,7 +19,7 @@ public class ReflectionCheck {
         if (arr1.length ==0 && arr2.length == 0) return true;
         if ( arr1.length == 1 && arr2.length == 1 && arr1[0] == arr2[0])  return true;
 
-        // create a new arary to copy content of 2nd array twice
+        // create a new arary to copy content of 2nd array twice the size
         int copyCounter = 1;
         int targetCopy = 2;
         int[] arr3 = new int[arr2.length*targetCopy];

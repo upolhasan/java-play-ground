@@ -1,8 +1,8 @@
-package upol.corejava;
+package upol.leetcode.easy;
 
 import java.util.Arrays;
 
-public class TwoSum {
+public class TwoSumTrivial {
 
   public static int[] getTwoSumIndices( int[] nums, int sum){
 
